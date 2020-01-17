@@ -26,9 +26,10 @@
         statement.setDate(3, date);
         statement.executeUpdate();
     }
+1.  Uzupełnij klasy Product i Order o odpowiednie pola i metody dostępowe tak, aby odwzorowywała
+    pojedyńczy rekord z tabeli products
 
-
-1.  Otwórz klasę ​ ClassicModelsManager. Dodaj następujące metody:
+2.  Otwórz klasę ​ ClassicModelsManager. Dodaj następujące metody:
 
         - public List<Product> findProductByName(String nameMatcher);
             - zwraca listę produktów zawierających w nazwie teks podany jako parametr nameMatcher
@@ -39,7 +40,7 @@
         - public List<Order> findOrdersByDate(Date from, Date to);
             - zwraca listę zamówień złożonych pomiędzy datami podanymi jako parametr
 
-2.  Uzupełnij metodę main o możliwość wywołania powyższych metod
+3.  Uzupełnij metodę main o możliwość wywołania powyższych metod
 
 
 

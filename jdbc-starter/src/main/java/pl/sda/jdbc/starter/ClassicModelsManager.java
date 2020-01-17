@@ -6,7 +6,7 @@ public class ClassicModelsManager {
 
     }
 
-    public void updateProductPrices(double updateRate) {
+    public void updateProductPrices() {
 
     }
 

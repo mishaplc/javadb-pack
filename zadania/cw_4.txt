@@ -16,15 +16,13 @@
     DTO ​ (ang. ​ Data ​ Transfer​ ​ Object) ​ - klasa przechowująca dane z tabelki,
     odwzorowanie jednego wiersza tabeli w kodzie programu Java
 
-1.  Uzupełnij klasę Product o odpowiednie pola i metody dostępowe tak, aby odwzorowywała
-    pojedyńczy rekord z tabeli products
 
-2.  Korzystając z wcześniej zbudowanych klas (np. ConnectionFactory) zaimplementuj
+1.  Korzystając z wcześniej zbudowanych klas (np. ConnectionFactory) zaimplementuj
     interface ProductDao
 
-3.  Powtórz powyższe ćwiczenia dla tabeli employees
+2.  Powtórz powyższe ćwiczenia dla tabeli employees
 
-4.  Czy powyższe rozwiązanie ma dużo powtarzalnego kodu? Czy jesteś w stanie go uprościć?
+3.  Czy powyższe rozwiązanie ma dużo powtarzalnego kodu? Czy jesteś w stanie go uprościć?
 
 
 
