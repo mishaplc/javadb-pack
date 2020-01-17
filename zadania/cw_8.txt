@@ -1,0 +1,52 @@
+
+        * * * * * * * * * * * * * * * * * * * * * *
+        *                                         *
+        *           Ćwiczenie 8 - JPQL            *
+        *                                         *
+        * * * * * * * * * * * * * * * * * * * * * *
+
+0.  Przydatne informacje:
+
+    JPQL (ang. Java Persistence Query Language)
+    - niezależny od bazy danych zorientowany obiektowo język zapytań
+    - używa się go do wykonywania zapytań do bazy danych
+    - przypomina język SQL ale operuje na encjach JPA (obiektach), a nie na
+        tabelach bazy danych
+    - wspierane zapytania to: SELECT, UPDATE, DELETE.
+
+    HQL (ang. Hibernate Query Language)
+    - język zapytań biblioteki Hibernate
+    - stworzony wcześniej niż JPQL
+    - JPQL był mocno inspirowany podczas tworzenia specyfikacją HQL
+
+    https://www.thoughts-on-java.org/jpql/
+
+1.  Przejdź do modułu jpa-starter i sprawdź konfigurację bazy danych w pliku
+        persistence.xml dla Persistence Unit o nazwie: pl.sda.jpa.starter.queries. Powinna
+        wskazywać na bazę: jpa_queries_test. Stwórz nową bazę danych o takiej nazwie.
+
+2.  Znajdź klasę JpaQueries . Uruchom metodę simpleQuery(). Przeanalizuj kod.
+    Następnie dodaj kod który:
+    - Wyświetli wszystkich studentów posortowanych rosnąco po nazwie
+    - Wyświetli trzech ostatnich studentów posortowanych malejąco
+    - Wyświetli tylko studentów (tylko nazwy) którzy mają więcej niż 25 lat
+    - Wyświetli wiek i ilość studentów w tym wieku na podstawie tabelki students -
+        dane należy pobrać jako listę obiektów klasy (stwórz tą klasę): StudentsStats
+        z polami: age, studentsNumber
+
+3.  Znajdź klasę JpaQueries. Uruchom metodę relationsQuery(). Przeanalizuj kod.
+
+4.  W klase CourseEntityDaoExt uzupełnij metody, które wykorzystają JPQL, zgodnie z
+    tym co zapisane jest w komentarzach do metod:
+    - findByCity(),
+    - findByName(),
+    - findByDateRange(),
+    - findByCities()
+
+5.  W klase StudentEntityDaoExt uzupełnij metody, które wykorzystają JPQL, zgodnie
+    z tym co zapisane jest w komentarzach do metod:
+    - findBySeatRow(),
+    - findByCityAddress(),
+    - (dla chętnych)​ findBySkills(),
+    - (dla chętnych)​ findTheMostSkilled()
+

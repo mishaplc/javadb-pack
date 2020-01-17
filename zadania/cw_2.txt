@@ -1,0 +1,48 @@
+
+        * * * * * * * * * * * * * * * * * * * * * *
+        *                                         *
+        *      Ćwiczenie 2 - zapytania SQL        *
+        *                                         *
+        * * * * * * * * * * * * * * * * * * * * * *
+
+0. Przydatne informacje:
+
+    java.sql.Statement
+        - statyczne zapytanie do bazy danych
+        - Statement.executeQuery(q)​ - pobranie danych: SELECT
+        - Statement.executeUpdate(q)​ - aktualizowanie danych: UPDATE, INSERT...
+        - try-with-resources ​ - zawsze zamykamy na koniec
+
+    java.sql.ResultSet
+        - odpowiedź z wynikami z bazy danych
+        - try-with-resources ​ - jak zamkniemy Statement to i ResultSet
+
+    Użycie:
+    try(Statement statement = connection.createStatement()) {
+        String query = "INSERT INTO table_1(id, name) VALUES(1, ‘Bob’);";
+        statement.executeUpdate(query);
+        query = "SELECT id FROM table_1;";
+        ResultSet result = statement.executeQuery(query);
+        while (result.next()) {
+            int id = result.getInt("id");
+            logger.info("id: {}", id);
+        }
+    }
+
+    Konwersja typów:
+    VARCHAR   - String
+    INTEGER   - int
+    DATE      - java.sql.Date
+    TIMESTAMP - java.sql.Timestamp
+
+
+
+1.  Otwórz klasę ​ ClassicModelsManager. Korzystając z dotychczas napisanych klas wypełnij ciała metod:
+
+        - printAllOffices() - wypisuje na ekranie wszystkie informacje na temat wszystkich biur
+        - updateProductPrices(double updateRate) - podnosi cenę wszystkich produktów o
+            współczynnik podany jako parametr
+        - printAllCustomersWithSalesRepName() - wypisuje nazwy wszstkich klientów wraz z imieniem i nazwiskiem
+            przedstawiciela handlowego
+
+2.  Wypełnij ciało metody main tak aby po uruchomieniu programu dało się wybrać, którą metodę chcemy wywołać

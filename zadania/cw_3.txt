@@ -1,0 +1,45 @@
+
+        * * * * * * * * * * * * * * * * * * * * * *
+        *                                         *
+        *     Ćwiczenie 3 - zapytania SQL II      *
+        *                                         *
+        * * * * * * * * * * * * * * * * * * * * * *
+
+0.  Przydatne informacje:
+
+    java.sql.PreparedStatement
+        - prekompilowane zapytanie SQL
+        - PreparedStatement.executeQuery(q)​ - pobranie danych: SELECT
+        - PreparedStatement.executeUpdate(q)​ - aktualizowanie danych: UPDATE, INSERT...
+        - try-with-resources ​ - zawsze zamykamy na koniec
+
+    Użycie:
+    int id = 11;
+    String name = “Adam”;
+    java.sql.Date date = new java.sql.Date(2018, 6, 10);
+    String query = "INSERT INTO table1(id, name, date) VALUES(?, ?, ?)";
+
+    try(PreparedStatement statement = connection.prepareStatement(query)) {
+        //parameterIndex zaczyna się od 1!
+        statement.setInt(1, id);
+        statement.setInt(2, name);
+        statement.setDate(3, date);
+        statement.executeUpdate();
+    }
+
+
+1.  Otwórz klasę ​ ClassicModelsManager. Dodaj następujące metody:
+
+        - public List<Product> findProductByName(String nameMatcher);
+            - zwraca listę produktów zawierających w nazwie teks podany jako parametr nameMatcher
+
+        - public List<Order> findOrdersByEmloyeeId(int id);
+            - zwraca listę zamówień złożonych przez klientów obsługiwanych przez pracownika o podanym id
+
+        - public List<Order> findOrdersByDate(Date from, Date to);
+            - zwraca listę zamówień złożonych pomiędzy datami podanymi jako parametr
+
+2.  Uzupełnij metodę main o możliwość wywołania powyższych metod
+
+
+

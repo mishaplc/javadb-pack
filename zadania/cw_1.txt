@@ -1,0 +1,42 @@
+
+        * * * * * * * * * * * * * * * * * * * * * *
+        *                                         *
+        *     Ćwiczenie 1 - połączenie do bazy    *
+        *                                         *
+        * * * * * * * * * * * * * * * * * * * * * *
+
+1.  Otwórz klasę ​ ConnectionViaDataSource ​ (w module ​ jdbc-starter​ ) i uzupełnij
+    konfigurację bazy danych tak żeby połączyć się ze swoją lokalną bazą MySQL (może
+    to być baza stworzona na wcześniejszych zajęciach). Należy ustawić odpowiednio
+    pola: ​ DB_SERVER_NAME​ , ​ DB_NAME​ , ​ DB_USER​ , ​ DB_PASSWORD ​ - są to
+    parametry konfiguracyjne bazy danych. Uruchom metodę main i sprawdź czy
+    połączenie do bazy danych powiodło się.
+
+2.  Użyj konstrukcji ​try-with-resources do automatycznego zamknięcia obiektu Connection
+
+3.  Wzorując się na klasie ​ ConnectionViaDataSource uzupełnij kod w klasie
+    ConnectionFactory. Klasa ta ma stać się naszą fabryką do tworzenia połączeń do
+    wybranej przez nas bazy danych. Wewnątrz klasy ​ ConnectionFactory ​ należy
+    stworzyć obiekt DataSource (pamiętaj: tworzymy raz, wykorzystujemy wielokrotnie) i
+    następnie użyć go w metodzie ​ getConnection.
+
+4.  Przenieś parametry bazy danych do zewnętrznego pliku:
+        - Przeanalizuj plik ​ database.properties ​ w katalogu ​ resources
+        - Zmień wartości (po prawej stronie znaku ‘=’) na parametry twojej lokalnej bazy
+        - Utwórz konstruktory:
+            ConnectionFactory(String filename)
+            ConnectionFactory()
+        - D​rugi konstruktor ma wywołać pierwszy konstruktor z argumentem
+            filename=”​database.properties​”
+        - Pobierz parametry bazy danych z pliku za pomocą metody
+            getDataBaseProperties(String fileName)
+        - Użyj parametrów bazy danych pobranych z pliku przy pomocy metody:
+            Properties.getProperty(String key)​ np.:
+            properties.getProperty("pl.sda.jdbc.db.server")
+        - W metodzie main stwórz obiekt ​ ConnectionFactory ​ pobierz połączenie i
+            sprawdź czy działa - możesz użyć kodu z ​ ConnectionViaDataSource
+
+5.  Otwórz klasę ​ ConnectionViaDriverManager i ​ uzupełnij konfigurację
+    bazy danych (parametry: ​ DB_URL, DB_USER, DB_PASSWORD​ ) tak żeby połączyć
+    się ze swoją lokalną bazą MySQL. Uruchom metodę main i sprawdź czy połączenie
+    do bazy danych się powiodło.
