@@ -24,7 +24,7 @@ public class ConnectionViaDriverManager {
     private static final String DB_URL = "localhost";
 
     private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "VUnruk2X";
+    private static final String DB_PASSWORD = "password";
 
     public static void main(String[] args) {
         try {

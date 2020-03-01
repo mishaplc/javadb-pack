@@ -13,7 +13,7 @@ public class ConnectionViaDataSource {
     private static final String DB_SERVER_NAME = "localhost";
     private static final String DB_NAME = "classicmodels";
     private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "VUnruk2X";
+    private static final String DB_PASSWORD = "password";
     private static final int DB_PORT = 3306;
 
     public static void main(String[] args) {
