@@ -21,10 +21,10 @@ public class ConnectionViaDriverManager {
      * <b>{nazwa_bazy_danych}</b> - nazwa bazy z którą chcemy się połączyć<br />
      * <b>{parametry}</b> - dodatkowe parametry, które chcemy przekazać przy łączeniu się z bazą - są opcjonalne<br />
      */
-    private static final String DB_URL = "";
+    private static final String DB_URL = "localhost";
 
-    private static final String DB_USER = "";
-    private static final String DB_PASSWORD = "";
+    private static final String DB_USER = "root";
+    private static final String DB_PASSWORD = "VUnruk2X";
 
     public static void main(String[] args) {
         try {

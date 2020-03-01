@@ -30,15 +30,21 @@ public class JpaBasic {
             /**
              * Zapisujemy encję w bazie danych
              */
-            CoachEntity coachEntity = new CoachEntity("Vlad Mihalcea");
-            entityManager.remove(coachEntity);
+//            CoachEntity coachEntity = new CoachEntity("Michal Pelc");
+//            entityManager.persist(coachEntity);
+            /**
+             * Usuwa encje w bazie danych
+             */
+//            CoachEntity coachEntity = entityManager.find(CoachEntity.class, 2);
+//            entityManager.remove(coachEntity);
+
 
             /**
              * Wyciągamy wszystkie encje zapisane w bazie danych
              */
-            TypedQuery<CoachEntity> query = entityManager.createQuery("from CoachEntity", CoachEntity.class);
-            List<CoachEntity> coaches = query.getResultList();
-            System.out.println("coaches = " + coaches);
+//            TypedQuery<CoachEntity> query = entityManager.createQuery("from CoachEntity", CoachEntity.class);
+//            List<CoachEntity> coaches = query.getResultList();
+//            System.out.println("coaches = " + coaches);
 
             /**
              * Kończymy (commitujemy) transakcję - wszystkie dane powinny być zapisane w bazie
